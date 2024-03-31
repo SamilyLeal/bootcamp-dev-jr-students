@@ -3,6 +3,7 @@ package com.ssl.bootcampdevjrstudents.controllers;
 import com.ssl.bootcampdevjrstudents.models.Course;
 import jakarta.annotation.PostConstruct;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/courses")
+@CrossOrigin
 public class CourseController {
     List<Course> courses = new ArrayList<>();
 
