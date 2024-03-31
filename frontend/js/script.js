@@ -28,7 +28,28 @@ function loadStudents() {
     });
 }
 
+function save() {
+    var student = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("inputPhone").value,
+        idCourse: document.getElementById("selectCourse").value,
+        period: document.getElementById("inputPeriod").value
+    };
 
+    $.ajax({
+        url: "http://localhost:8080/students",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(student),
+        success: (savedStudent) => {
+            addNewRow(savedStudent);
+            students.push(savedStudent);
+            document.getElementById("formStudents").reset();
+        }
+    });
+}
 
 //Add new Row
 function addNewRow(student) {
