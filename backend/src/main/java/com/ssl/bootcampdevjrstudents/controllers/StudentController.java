@@ -22,10 +22,13 @@ public class StudentController {
     @PostConstruct
     public void init(){
         students.add(new Student(1, "octopus", "oct@gmail.com",
-                            "11944556677",2,1));
+                            "11944556677",1,1));
 
         students.add(new Student(2, "shrimp", "shr@gmail.com",
                 "11944556699",2,2));
+
+        students.add(new Student(3, "whale", "wha@gmail.com",
+                "11944556688",3,10));
     }
 
     @GetMapping

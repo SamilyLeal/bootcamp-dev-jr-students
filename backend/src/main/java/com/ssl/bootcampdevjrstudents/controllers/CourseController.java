@@ -21,8 +21,7 @@ public class CourseController {
     public void init(){
         courses.add(new Course(1, "ADS"));
         courses.add(new Course(2, "GTI"));
-        courses.add(new Course(3, "CS"));
-        courses.add(new Course(4, "MED"));
+        courses.add(new Course(3, "MED"));
     }
 
     @GetMapping
